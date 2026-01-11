@@ -1,34 +1,18 @@
 class ThisKeyword {
-    private double balance;
-
-    //CONSTRUCTOR
-    public ThisKeyword(double balance){
-        this.balance=balance;
+    public String model;
+    public double price;
+    ThisKeyword(String m,double p){
+        this.model=m;
+        this.price=p;
     }
 
-    //GETTER
-    public double getBalance(){
-        return this.balance;
+    public void display(){
+        System.out.println("MODEL OF PHONE IS :"+model);
+        System.out.println("PRICE OF THE PHONE IS :"+price);
     }
 
-    //DEPOSIT AMOUNT
-    public void depositAmount(double amount){
-        this.balance=this.balance+amount;
-    }
-
-    //WITHDRAW AMOUNT
-    public void withdrawAmount(double amount){
-        if(amount>0 && this.balance>=amount){
-            this.balance=this.balance-amount;
-        }
-        else{
-            System.out.println("INSUFFICIENT BALANCE");
-        }
-    }
     public static void main(String args[]){
-        ThisKeyword user=new ThisKeyword(1000000);
-        user.depositAmount(1000);
-        user.withdrawAmount(5500);
-        System.out.println("TOTAL BALANCE =" +user.getBalance());
+        ThisKeyword mobile=new ThisKeyword("SamsuNG",100500);
+        mobile.display();
     }
 }
