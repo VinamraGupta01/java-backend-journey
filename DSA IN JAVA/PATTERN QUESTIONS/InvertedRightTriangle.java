@@ -7,7 +7,7 @@ PATTERN 1 :
 **
 *
 */
-public class Pattern1 {
+public class InvertedRightTriangle {
     public static void main(String[] args) {
         
         Scanner sc=new Scanner(System.in);
